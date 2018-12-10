@@ -6,8 +6,8 @@
     con recordatorios para que nunca te quedes sin lo que necesitas
   </p>
   <div class="sesion-div">
-    <a [routerLink]="['/login']">Inicia Sesión </a>
-    <span>ó</span>
-    <a [routerLink]="['/auth']"> Regístrate</a>
+    <p class="click" (click)="log()">Inicia Sesión </p>
+    <p> ó </p>
+    <p class="click" (click)="sign()"> Regístrate</p>
   </div>
 </section>

@@ -14,3 +14,14 @@ $colors: (
     justify-content: center;
     align-items: center;
 }
+
+.click {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sesion-div {
+    display: flex;
+}

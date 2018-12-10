@@ -27,6 +27,11 @@ third: #FF7B0E);
   }
 }
 
+.click {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .button {
   background-color: color(primary);
   border-bottom: 5px solid color(third);

@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AuthComponent } from './components/auth/auth.component';
-import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { AddComponent } from './components/add/add.component';
@@ -18,7 +17,6 @@ import { AddwarehouseComponent } from './components/addwarehouse/addwarehouse.co
     AppComponent,
     HeaderComponent,
     AuthComponent,
-    LoginComponent,
     HomeComponent,
     LandingComponent,
     AddComponent,

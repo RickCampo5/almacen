@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { bypassSanitizationTrustStyle } from '@angular/core/src/sanitization/bypass';
 
 @Component({
   selector: 'app-landing',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
+
+  account: String;
+
+  log(){
+    this.account = "log"
+    this.router.navigate(['/auth', this.account])
+  }
+
+  sign(){
+    this.account = "sign"
+    this.router.navigate(['/auth', this.account])
+  }
 
   ngOnInit() {
   }
