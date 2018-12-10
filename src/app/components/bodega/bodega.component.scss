@@ -73,3 +73,20 @@ $tablet: 1024px;
       border-bottom: 1px solid;
     }
   }
+
+  .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .edit-button {
+    color: color(third);
+    cursor: pointer;
+  }
+
+  .eliminate-button {
+    color: color(third);
+    margin-left: 20px;
+    cursor: pointer;
+  }

@@ -1,7 +1,19 @@
 <section class="display">
-  <h2>{{bodega.nombre}}</h2>
+  <div class="header">
+    <h2>{{bodega.nombre}}</h2>
+    <div>
+      <i class="fas fa-edit edit-button"></i>
+      <i class="fas fa-times eliminate-button"></i>
+    </div>
+  </div>
   <div class="objects" *ngFor="let objeto of bodega.objetos">
+    <div class="header">
     <p>{{objeto.nombre}}</p>
+    <div>
+      <i class="fas fa-edit edit-button"></i>
+      <i class="fas fa-times eliminate-button"></i>
+    </div>
+    </div>
     <p>{{objeto.qty}}</p>
     <p>{{objeto.caducidad}}</p>
   </div>
