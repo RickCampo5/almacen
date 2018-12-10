@@ -1,0 +1,8 @@
+<app-header></app-header>
+<section class="login">
+  <h2>Entra</h2>
+  <input [(ngModel)]="user.email" type="email" name="email" placeholder="Correo electrónico">
+  <input [(ngModel)]="user.password" type="password" name="password" placeholder="Contraseña">
+  <div class="action-button button">Entrar</div>
+  <a [routerLink]="['/auth']">¿No tienes una cuenta?</a>
+</section>

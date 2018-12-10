@@ -1,0 +1,15 @@
+<section class="display">
+  <h2>{{bodega.nombre}}</h2>
+  <div class="objects" *ngFor="let objeto of bodega.objetos">
+    <p>{{objeto.nombre}}</p>
+    <p>{{objeto.qty}}</p>
+    <p>{{objeto.caducidad}}</p>
+  </div>
+  <div *ngIf="addActive">
+    <app-add></app-add>
+  </div>
+  <div class="add">
+    <div *ngIf="addActive == false" (click)="showAddComponent()" class="action-button button">+</div>
+    <div *ngIf="addActive" (click)="hideAddComponent()" class="action-button button">-</div>
+  </div>
+</section>

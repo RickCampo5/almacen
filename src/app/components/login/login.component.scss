@@ -1,0 +1,51 @@
+$colors: (primary: #FF9339,
+secondary: #FFC08C,
+third: #FF7B0E);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  h2 {
+    font-size: 22pt;
+  }
+
+  input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid color(secondary);
+    font-size: 15pt;
+  }
+}
+
+.button {
+  background-color: color(primary);
+  border-bottom: 5px solid color(third);
+  text-shadow: 0px -2px color(third);
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  color: #FFF;
+
+  &:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+  }
+}

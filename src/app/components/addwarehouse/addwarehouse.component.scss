@@ -1,0 +1,36 @@
+$colors: (
+    primary: #FF9339,
+    secondary: #FFC08C,
+    third: #FF7B0E
+);
+
+$phone: 400px;
+$tablet: 1024px;
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+@function color($color-name) {
+    @return map-get( $colors, $color-name )
+}
+
+input {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid color(secondary);
+    font-size: 10pt;
+    color: #fff;
+  }

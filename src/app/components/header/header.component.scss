@@ -1,0 +1,35 @@
+$colors: (
+    primary: #FF9339,
+    secondary: #FFC08C,
+    third: #FF7B0E
+);
+
+@function color($color-name) {
+    @return map-get( $colors, $color-name )
+}
+
+.nav {
+    height: 50px;
+    max-width: 100vw;
+    background-color: color(third);
+    color: #fff;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.links {
+    list-style: none;
+    display: flex;
+
+    li {
+        margin-left: 15px;
+    }
+}

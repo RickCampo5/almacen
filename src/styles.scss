@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$colors: (
+    primary: #FF9339,
+    secondary: #FFC08C,
+    third: #FF7B0E
+);
+
+@function color($color-name) {
+    @return map-get( $colors, $color-name )
+}
+
+body, 
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+}

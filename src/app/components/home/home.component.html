@@ -1,0 +1,13 @@
+<app-header></app-header>
+<section>
+  <div class="title-div">
+    <h2 class="title">Bodegas</h2>
+    <input type="text" placeholder="Nombre de la bodega">
+    <div class="action-button button">Añadir</div>
+  </div>
+  <div class="display-warehouse">
+    <div *ngFor="let bodega of bodegas">
+      <app-bodega [bodega]="bodega"></app-bodega>
+    </div>
+  </div>
+</section>

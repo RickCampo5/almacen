@@ -1,0 +1,89 @@
+$colors: (primary: #FF9339,
+secondary: #FFC08C,
+third: #FF7B0E);
+
+$phone: 400px;
+$tablet: 1024px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+.display-warehouse {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  div {
+    margin-left: 50px;
+  }
+
+  @include phone {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+}
+
+.title {
+  margin-left: 50px;
+}
+
+.button {
+  background-color: color(primary);
+  border-bottom: 5px solid color(third);
+  text-shadow: 0px -2px color(third);
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  font-size: 20pt;
+}
+
+.action-button {
+  position: relative;
+  padding: 10px 30px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  color: #FFF;
+
+  &:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    border-bottom: 1px solid;
+  }
+}
+
+.title-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+input {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid color(secondary);
+    font-size: 10pt;
+  }

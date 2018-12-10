@@ -1,0 +1,16 @@
+$colors: (
+    primary: #FF9339,
+    secondary: #FFC08C,
+    third: #FF7B0E
+);
+
+@function color($color-name) {
+    @return map-get( $colors, $color-name )
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
